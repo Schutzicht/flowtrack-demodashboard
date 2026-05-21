@@ -7,8 +7,8 @@ import { roles, branches } from '../data/context';
 ---
 <Base title="FlowTrack Planner — Sign in">
   <div class="min-h-screen relative overflow-hidden bg-navy text-white">
-    {/* Backdrop */}
-    <div class="absolute inset-0">
+    {/* Backdrop - radial gradients + lines */}
+    <div class="absolute inset-0 z-0 pointer-events-none">
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_0%,rgba(17,181,197,0.28),transparent_60%),radial-gradient(ellipse_60%_50%_at_85%_100%,rgba(168,216,232,0.18),transparent_60%)]"></div>
       <svg class="absolute inset-0 w-full h-full opacity-[0.07]" viewBox="0 0 1440 900" preserveAspectRatio="none">
         <path d="M0,480 C200,400 400,560 720,480 C1040,400 1240,560 1440,480" stroke="#11B5C5" stroke-width="1.5" fill="none" />
@@ -16,14 +16,14 @@ import { roles, branches } from '../data/context';
       </svg>
     </div>
 
-    <div class="relative z-10 min-h-screen flex flex-col">
-      {/* Background photo strip */}
-      <div class="absolute inset-y-0 right-0 w-[55%] hidden lg:block">
-        <div class="absolute inset-0 opacity-[0.22]" style="background: url('/photos/team-group.jpg') center/cover;"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-transparent"></div>
-      </div>
+    {/* Background photo strip — alleen links onder de hero-tekst, niet rechts onder de kaart */}
+    <div class="absolute inset-y-0 left-0 w-[40%] hidden lg:block z-0 pointer-events-none">
+      <div class="absolute inset-0 opacity-[0.18]" style="background: url('/photos/team-group.jpg') center/cover;"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/60 to-navy"></div>
+    </div>
 
-      <header class="px-6 lg:px-10 py-6 flex items-center justify-between relative z-10">
+    <div class="relative z-10 min-h-screen flex flex-col">
+      <header class="px-6 lg:px-10 py-6 flex items-center justify-between">
         <Logo variant="light" />
         <div class="hidden sm:flex items-center gap-3 text-[12px] text-white/50">
           <span class="hidden md:inline">Internal planning tool</span>
@@ -65,7 +65,7 @@ import { roles, branches } from '../data/context';
         </div>
 
         {/* Sign in card */}
-        <div class="bg-white text-ink rounded-[20px] p-6 lg:p-7 max-w-[480px] w-full justify-self-stretch lg:justify-self-end shadow-[0_24px_64px_-16px_rgba(0,0,0,0.5)]">
+        <div class="relative z-20 bg-white text-ink rounded-[20px] p-6 lg:p-7 max-w-[480px] w-full justify-self-stretch lg:justify-self-end shadow-[0_24px_64px_-16px_rgba(0,0,0,0.5)]" style="background:#ffffff; color:#0A1525;">
           <div class="text-[11px] uppercase tracking-[0.08em] text-mist font-semibold mb-1">Demo sign in</div>
           <h2 class="text-[24px] font-display font-bold tracking-tight">Wie ben je vandaag?</h2>
           <p class="text-[13px] text-ink-soft mt-1 mb-5">Kies een rol om de bijbehorende rechten te zien. Wisselen kan altijd via de topbalk.</p>
