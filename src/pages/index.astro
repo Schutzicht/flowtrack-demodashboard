@@ -23,74 +23,74 @@ import { roles, branches } from '../data/context';
     </div>
 
     <div class="relative z-10 min-h-screen flex flex-col">
-      <header class="px-6 lg:px-10 py-6 flex items-center justify-between">
+      <header class="px-5 lg:px-10 py-5 lg:py-6 flex items-center justify-between gap-3">
         <Logo variant="light" />
-        <div class="hidden sm:flex items-center gap-3 text-[12px] text-white/50">
+        <div class="flex items-center gap-3 text-[12px] text-white/50">
           <span class="hidden md:inline">Internal planning tool</span>
-          <span class="pill bg-white/[0.08] text-white/70 border border-white/10">v2.6 — concept</span>
+          <span class="pill bg-white/[0.08] text-white/70 border border-white/10 whitespace-nowrap">v2.6 — concept</span>
         </div>
       </header>
 
-      <main class="flex-1 grid lg:grid-cols-[1.1fr_minmax(440px,1fr)] gap-10 lg:gap-16 px-6 lg:px-10 pb-12 items-center max-w-[1320px] mx-auto w-full">
+      <main class="flex-1 grid lg:grid-cols-[1.1fr_minmax(440px,1fr)] gap-8 lg:gap-16 px-5 lg:px-10 pt-2 pb-10 lg:items-center max-w-[1320px] mx-auto w-full">
         <div class="max-w-xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.08] border border-white/10 text-[12px] mb-6">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.08] border border-white/10 text-[11.5px] mb-5">
             <span class="w-1.5 h-1.5 rounded-full bg-flow pulse-ring"></span>
             Krokus + paasvakantie 2026
           </div>
-          <h1 class="text-[44px] lg:text-[64px] font-display font-bold leading-[0.98] tracking-[-0.03em] text-balance">
+          <h1 class="text-[30px] sm:text-[40px] lg:text-[64px] font-display font-bold leading-[1.02] lg:leading-[0.98] tracking-[-0.02em] lg:tracking-[-0.03em] text-balance">
             Een planner voor je <span class="text-flow">skischool</span>,<br class="hidden lg:block"/> surfkamp en alles daartussen.
           </h1>
-          <p class="mt-6 text-white/65 text-[15.5px] leading-relaxed max-w-lg text-pretty">
+          <p class="mt-4 lg:mt-6 text-white/65 text-[14px] lg:text-[15.5px] leading-relaxed max-w-lg text-pretty">
             Importeer 500 inschrijvingen, laat de planner ze clusteren op niveau, leeftijd en voorkeur, en verschuif live met je team. Monitoren scannen ter plekke een QR en zien direct hun groep.
           </p>
 
-          <div class="mt-9 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-lg">
-            <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-3.5 hover:bg-white/[0.06] transition-colors">
-              <div class="text-[24px] font-display font-bold leading-none">522</div>
-              <div class="text-[11px] text-white/55 mt-1.5">deelnemers krokus 2026</div>
+          <div class="mt-6 lg:mt-9 grid grid-cols-2 lg:grid-cols-4 gap-2.5 lg:gap-3 max-w-lg">
+            <div class="rounded-xl lg:rounded-2xl bg-white/[0.04] border border-white/10 p-3 lg:p-3.5">
+              <div class="text-[20px] lg:text-[24px] font-display font-bold leading-none">522</div>
+              <div class="text-[10.5px] lg:text-[11px] text-white/55 mt-1.5 leading-tight">deelnemers krokus 2026</div>
             </div>
-            <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-3.5">
-              <div class="text-[24px] font-display font-bold leading-none">95<span class="text-flow">%</span></div>
-              <div class="text-[11px] text-white/55 mt-1.5">correct na dag 1</div>
+            <div class="rounded-xl lg:rounded-2xl bg-white/[0.04] border border-white/10 p-3 lg:p-3.5">
+              <div class="text-[20px] lg:text-[24px] font-display font-bold leading-none">95<span class="text-flow">%</span></div>
+              <div class="text-[10.5px] lg:text-[11px] text-white/55 mt-1.5 leading-tight">correct na dag 1</div>
             </div>
-            <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-3.5">
-              <div class="text-[24px] font-display font-bold leading-none">5</div>
-              <div class="text-[11px] text-white/55 mt-1.5">niveaus met eigen cap</div>
+            <div class="rounded-xl lg:rounded-2xl bg-white/[0.04] border border-white/10 p-3 lg:p-3.5">
+              <div class="text-[20px] lg:text-[24px] font-display font-bold leading-none">5</div>
+              <div class="text-[10.5px] lg:text-[11px] text-white/55 mt-1.5 leading-tight">niveaus met eigen cap</div>
             </div>
-            <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-3.5">
-              <div class="text-[24px] font-display font-bold leading-none">4</div>
-              <div class="text-[11px] text-white/55 mt-1.5">locaties, multi-user</div>
+            <div class="rounded-xl lg:rounded-2xl bg-white/[0.04] border border-white/10 p-3 lg:p-3.5">
+              <div class="text-[20px] lg:text-[24px] font-display font-bold leading-none">4</div>
+              <div class="text-[10.5px] lg:text-[11px] text-white/55 mt-1.5 leading-tight">locaties, multi-user</div>
             </div>
           </div>
         </div>
 
         {/* Sign in card */}
-        <div class="relative z-20 bg-white text-ink rounded-[20px] p-6 lg:p-7 max-w-[480px] w-full justify-self-stretch lg:justify-self-end shadow-[0_24px_64px_-16px_rgba(0,0,0,0.5)]" style="background:#ffffff; color:#0A1525;">
-          <div class="text-[11px] uppercase tracking-[0.08em] text-mist font-semibold mb-1">Demo sign in</div>
-          <h2 class="text-[24px] font-display font-bold tracking-tight">Wie ben je vandaag?</h2>
-          <p class="text-[13px] text-ink-soft mt-1 mb-5">Kies een rol om de bijbehorende rechten te zien. Wisselen kan altijd via de topbalk.</p>
+        <div class="relative z-20 bg-white text-ink rounded-2xl lg:rounded-[20px] p-5 lg:p-7 w-full lg:max-w-[480px] lg:justify-self-end shadow-[0_16px_48px_-12px_rgba(0,0,0,0.4)] lg:shadow-[0_24px_64px_-16px_rgba(0,0,0,0.5)]" style="background:#ffffff; color:#0A1525;">
+          <div class="text-[10.5px] uppercase tracking-[0.08em] text-mist font-semibold mb-1">Demo sign in</div>
+          <h2 class="text-[22px] lg:text-[24px] font-display font-bold tracking-tight">Wie ben je vandaag?</h2>
+          <p class="text-[12.5px] lg:text-[13px] text-ink-soft mt-1 mb-4 lg:mb-5">Kies een rol om de bijbehorende rechten te zien. Wisselen kan altijd via de topbalk.</p>
 
           <div class="space-y-2">
             {roles.map((r) => (
               <a
                 href={`/dashboard?b=ski&r=${r.id}`}
-                class="group flex items-center gap-3 p-3 rounded-xl border border-line hover:border-flow hover:bg-flow-soft/40 transition-all"
+                class="group flex items-center gap-3 p-2.5 lg:p-3 rounded-xl border border-line hover:border-flow hover:bg-flow-soft/40 transition-all"
               >
-                <Avatar src={r.avatar} initials={r.initials} size="xl" />
+                <Avatar src={r.avatar} initials={r.initials} size="lg" />
                 <div class="flex-1 min-w-0">
-                  <div class="text-[14px] font-semibold leading-tight">{r.name}</div>
-                  <div class="text-[11.5px] text-ink-soft leading-snug truncate">{r.scope}</div>
+                  <div class="text-[13.5px] lg:text-[14px] font-semibold leading-tight">{r.name}</div>
+                  <div class="text-[11px] lg:text-[11.5px] text-ink-soft leading-snug truncate">{r.scope}</div>
                 </div>
-                <Icon name="arrow-right" size={16} class="text-mist group-hover:text-flow group-hover:translate-x-0.5 transition-all" />
+                <Icon name="arrow-right" size={16} class="text-mist group-hover:text-flow group-hover:translate-x-0.5 transition-all shrink-0" />
               </a>
             ))}
           </div>
 
-          <div class="mt-6 pt-5 border-t border-line">
-            <div class="text-[11px] uppercase tracking-[0.08em] text-mist font-semibold mb-2.5">Of start direct in branche</div>
+          <div class="mt-5 lg:mt-6 pt-4 lg:pt-5 border-t border-line">
+            <div class="text-[10.5px] uppercase tracking-[0.08em] text-mist font-semibold mb-2.5">Of start direct in branche</div>
             <div class="grid grid-cols-2 gap-2">
               {branches.map((b) => (
-                <a href={`/dashboard?b=${b.id}&r=admin`} class="text-[12.5px] px-3 py-2 rounded-lg border border-line hover:border-flow hover:bg-flow-soft text-center font-medium transition-all">
+                <a href={`/dashboard?b=${b.id}&r=admin`} class="text-[12px] lg:text-[12.5px] px-3 py-2.5 rounded-lg border border-line hover:border-flow hover:bg-flow-soft text-center font-medium transition-all">
                   {b.name}
                 </a>
               ))}
@@ -99,9 +99,9 @@ import { roles, branches } from '../data/context';
         </div>
       </main>
 
-      <footer class="px-6 lg:px-10 py-5 text-[12px] text-white/40 flex flex-wrap items-center justify-between gap-2 border-t border-white/[0.06]">
+      <footer class="px-5 lg:px-10 py-4 lg:py-5 text-[11px] lg:text-[12px] text-white/40 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 border-t border-white/[0.06]">
         <span>FlowTrack Travel · concept-demo door Agensea</span>
-        <span>Niet verbonden met productie. Alle data is fictief.</span>
+        <span class="text-white/30">Niet verbonden met productie. Alle data is fictief.</span>
       </footer>
     </div>
   </div>
