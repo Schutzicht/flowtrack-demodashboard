@@ -14,20 +14,20 @@ const trendColor = trend?.dir === 'up' ? 'text-go' : trend?.dir === 'down' ? 'te
 const trendArrow = trend?.dir === 'up' ? '↑' : trend?.dir === 'down' ? '↓' : '→';
 const isNumeric = animated && typeof value === 'number';
 ---
-<div class={`card p-5 relative overflow-hidden group hover:shadow-md transition-shadow ${accent ? 'bg-ink text-white border-ink' : ''}`}>
+<div class={`card p-4 lg:p-5 relative overflow-hidden group hover:shadow-md transition-shadow min-w-0 ${accent ? 'bg-ink text-white border-ink' : ''}`}>
   {accent && (
     <div class="absolute inset-0 opacity-30 gradient-mesh pointer-events-none"></div>
   )}
-  <div class="relative">
-    <div class={`text-[11px] uppercase tracking-[0.06em] font-semibold ${accent ? 'text-white/50' : 'text-mist'}`}>{label}</div>
-    <div class="mt-2.5 flex items-baseline gap-2">
+  <div class="relative min-w-0">
+    <div class={`text-[10.5px] lg:text-[11px] uppercase tracking-[0.06em] font-semibold truncate ${accent ? 'text-white/50' : 'text-mist'}`}>{label}</div>
+    <div class="mt-2 lg:mt-2.5 flex items-baseline gap-2 min-w-0">
       {isNumeric ? (
-        <div class="text-[32px] lg:text-[36px] font-display font-bold leading-none tracking-tight" data-count={value} data-count-prefix={prefix} data-count-suffix={suffix}>{prefix}0{suffix}</div>
+        <div class="text-[26px] sm:text-[30px] lg:text-[36px] font-display font-bold leading-none tracking-tight truncate min-w-0" data-count={value} data-count-prefix={prefix} data-count-suffix={suffix}>{prefix}0{suffix}</div>
       ) : (
-        <div class="text-[32px] lg:text-[36px] font-display font-bold leading-none tracking-tight">{prefix}{value}{suffix}</div>
+        <div class="text-[26px] sm:text-[30px] lg:text-[36px] font-display font-bold leading-none tracking-tight truncate min-w-0">{prefix}{value}{suffix}</div>
       )}
-      {trend && <span class={`text-[12px] font-semibold ${trendColor}`}>{trendArrow} {trend.value}</span>}
+      {trend && <span class={`text-[11px] lg:text-[12px] font-semibold shrink-0 ${trendColor}`}>{trendArrow} {trend.value}</span>}
     </div>
-    {hint && <div class={`mt-2 text-[12px] ${accent ? 'text-white/60' : 'text-ink-soft'}`}>{hint}</div>}
+    {hint && <div class={`mt-1.5 lg:mt-2 text-[11.5px] lg:text-[12px] truncate ${accent ? 'text-white/60' : 'text-ink-soft'}`}>{hint}</div>}
   </div>
 </div>

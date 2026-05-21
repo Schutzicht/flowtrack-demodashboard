@@ -53,22 +53,22 @@ const t = tagByBranch[branch.id];
       )}
     </svg>
 
-    <div class="relative max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.14] backdrop-blur text-[11px] font-medium mb-4 border border-white/15">
-        <span class="w-1.5 h-1.5 rounded-full bg-flow pulse-ring"></span>
-        {t.tag}
+    <div class="relative max-w-3xl min-w-0">
+      <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.14] backdrop-blur text-[11px] font-medium mb-4 border border-white/15 max-w-full">
+        <span class="w-1.5 h-1.5 rounded-full bg-flow pulse-ring shrink-0"></span>
+        <span class="truncate">{t.tag}</span>
       </div>
-      <h1 class="text-[28px] lg:text-[40px] font-display font-bold leading-[1.05] tracking-tight text-balance drop-shadow-sm">{branch.name}</h1>
-      <p class="text-white/80 mt-2 text-[14.5px] max-w-2xl text-pretty">{t.sub}</p>
+      <h1 class="text-[24px] sm:text-[28px] lg:text-[40px] font-display font-bold leading-[1.1] lg:leading-[1.05] tracking-tight text-balance break-words drop-shadow-sm">{branch.name}</h1>
+      <p class="text-white/80 mt-2 text-[13.5px] lg:text-[14.5px] max-w-2xl text-pretty">{t.sub}</p>
 
-      <div class="mt-7 grid grid-cols-2 gap-6 max-w-lg">
-        <div>
-          <div class="text-[34px] lg:text-[44px] font-display font-bold leading-none tracking-tight drop-shadow-sm" data-count={primaryStat.value.replace(/[^0-9]/g, '')}>{primaryStat.value}</div>
-          <div class="text-[12px] text-white/70 mt-1.5">{primaryStat.label}</div>
+      <div class="mt-5 lg:mt-7 grid grid-cols-2 gap-4 lg:gap-6 max-w-lg">
+        <div class="min-w-0">
+          <div class="text-[26px] sm:text-[32px] lg:text-[44px] font-display font-bold leading-none tracking-tight drop-shadow-sm truncate" data-count={primaryStat.value.replace(/[^0-9]/g, '')}>{primaryStat.value}</div>
+          <div class="text-[11.5px] lg:text-[12px] text-white/70 mt-1.5 leading-tight">{primaryStat.label}</div>
         </div>
-        <div>
-          <div class="text-[34px] lg:text-[44px] font-display font-bold leading-none tracking-tight drop-shadow-sm">{secondaryStat.value}</div>
-          <div class="text-[12px] text-white/70 mt-1.5">{secondaryStat.label}</div>
+        <div class="min-w-0">
+          <div class="text-[26px] sm:text-[32px] lg:text-[44px] font-display font-bold leading-none tracking-tight drop-shadow-sm truncate">{secondaryStat.value}</div>
+          <div class="text-[11.5px] lg:text-[12px] text-white/70 mt-1.5 leading-tight">{secondaryStat.label}</div>
         </div>
       </div>
     </div>
